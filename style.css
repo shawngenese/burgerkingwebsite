@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
+:root {
+    --primary-color: rgb(80, 35, 20);
+    --main-bg-color: ;
+}
+* {
+    padding: 0;
+    margin: 0;
+    border: 1px solid none;
+}
+/* #home {
+    scroll-padding-top: 120px ;
+} */
+.main {
+    background-color: #f9f9f9;
+}
+
+.main .navbar {
+    font-family: Changa One ;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.199);
+
+    font-size: 1.7em;
+    padding: 0 20px;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.main .navbar .logo {
+    flex: 1;
+}
+
+.main .navbar .logo img {
+    height: 100px;
+}
+
+.main .navbar .nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .navbar .nav-menu li {
+    list-style: none;
+    margin: 0 20px; 
+}
+
+.main .navbar .nav-menu a {
+    text-decoration: none;
+    color: brown;
+}
+
+.main-content {
+    margin: 0 50px;
+}
+
+.main-content .home-content {
+    margin-top: 120px;
+    height: 90vh;
+    width: 100%;
+    background-color: #f9f9f9;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 130px;
+}
+.home-content .text-content h1{
+    font-family: Changa One;
+    font-size: 2em;
+    color: brown;
+}
+.home-content .text-content {
+    font-size: 2.5rem;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(61, 16, 16);
+}
+.home-content .product-preview img {
+    display: block;
+    height: 600px;
+}
+
+
+
+
+
+.main .products-content {
+    height: 90vh;
+    background-color: #d1d1d1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main .products-content .product-name {
+    margin: 15px;
+    font-family: Changa one;
+    font-size: 2rem;
+    color: brown;
+}
+.main .products-content .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.main .products-content .products .product{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: gray;
+    margin: 20px;
+}
