@@ -61,8 +61,10 @@ img {
 .navigation-main,
 .main-content,
 .product-content,
-.contacts {
-  width: 100%;
+.about-content,
+.contact-content {
+  min-width: 100%;
+  height: 100vh;
 }
 
 .main {
@@ -80,7 +82,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
 
   height: 100px;
   padding: 0 20px;
@@ -96,10 +98,23 @@ img {
   margin: 80px;
 }
 
+
+
+/* taggalin mo rin to HAHAHAHA */
 .logo-container img {
   height: 100px;
   display: block;
+
+  /* animation: spinning 4s linear infinite; */
 }
+.logo-container img:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+
 
 .menu-container {
   display: flex;
@@ -130,7 +145,6 @@ img {
   display: block;
   height: 3px;
   width: 100%;
-  border-radius: 30%;
   background-color: var(--accent-color);
 
   transform: scaleX(0);
@@ -152,9 +166,9 @@ img {
   display: flex;
   align-items: center;
 
-  height: 90vh;
+  min-height: 90vh;
   gap: 5%;
-  padding: 0 100px 0 100px;
+  padding: 0 50px;
 }
 
 .text-content {
@@ -190,9 +204,13 @@ img {
   cursor: pointer;
 }
 
+.main-image {
+  width: 100%;
+}
+
 .main-image img {
-  width: auto;
-  height: 600px;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -207,7 +225,6 @@ img {
   align-items: center;
 
   gap: 20px;
-  min-height: 90vh;
 
   background-color: var(--accent-color);
 }
@@ -260,6 +277,7 @@ img {
   text-align: center;
 
   background-color: var(--main-bg-color);
+  background-color: var(--secondary-color);
   color: var(--accent-color);
 
   border-radius: 0 0 8px 8px;
@@ -280,8 +298,6 @@ img {
 
 /*  ABOUT SECTION  */
 .about-content {
-  height: 90vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,7 +356,6 @@ button:active {
 
 /*  CONTACT SECTION  */
 .contact-content {
-  height: 90vh;
   width: 100%;
 
   display: flex;
@@ -454,7 +469,6 @@ textarea:focus-visible {
 
 /*  FOOTER  */
 .footer-content {
-
   padding: 30px 0;
 
   font-size: .5em;
@@ -480,7 +494,6 @@ textarea:focus-visible {
 
 .footer-navigation li:hover {
   color: var(--primary-color);
-
 }
 
 
@@ -516,3 +529,16 @@ textarea:focus-visible {
   from { opacity: 0}
   to { opacity: 1}
 }
+
+@keyframes spinning {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+

@@ -1,15 +1,16 @@
 @import url('../style.css');
 
 .product-container {
+    width: 100%;
     padding: 100px 0;
     background-color: var(--main-bg-color);
     padding: 40px 100px;
+
 }
 
 .menu-greetings {
     color: var(--accent-color);
     font-family: var(--normal-font);
-    margin: 20px 0;
 }
 
 .menu-greetings h1 {
@@ -43,13 +44,14 @@
 .item-container {
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(400px, 400px));
     gap: 10px;
     margin: 20px 10px;
 }
 .item {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 
@@ -58,6 +60,12 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
     transition: all 0.3s ease;
+
+    overflow: hidden;
+}
+
+.item h3 {
+    font-size: 1.3rem;
 }
 
 .item:hover {
@@ -67,12 +75,13 @@
 }
 
 .item img {
-    width: 90%;
+    width: 70%;
 }
 .item h3 {
     font-size: 1.5rem;
     font-family: var(--header-font);
     color: var(--accent-color);
+    width: 80%;
 }
 .item p {
     font-size: 0.7rem;
@@ -99,6 +108,7 @@
     cursor: pointer;
 }
 
+
 @keyframes spinning {
     0%{
         transform: rotate(0deg);
@@ -107,9 +117,5 @@
         transform: rotate(360deg);
     }
 }
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
+
