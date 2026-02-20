@@ -56,21 +56,18 @@ img {
   scroll-margin-top: 110px;
 }
 
-
 /*  MAIN LAYOUT  */
-.navigation-main,
 .main-content,
 .product-content,
 .about-content,
 .contact-content {
-  min-width: 100%;
-  height: 100vh;
+  width: 100%;
+  padding: 110px 80px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   margin-top: 100px;
 }
 
@@ -85,17 +82,17 @@ img {
   z-index: 20;
 
   height: 100px;
-  padding: 0 20px;
+  padding: 0 50px;
 
   background-color: var(--main-bg-color);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 
-  font-family: Changa One, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--header-font);
 }
 
 .logo-container {
   flex: 1;
-  margin: 80px;
+  /* margin: 80px; */
 }
 
 
@@ -107,9 +104,9 @@ img {
 
   /* animation: spinning 4s linear infinite; */
 }
-.logo-container img:hover {
+/* .logo-container img:hover {
   animation-play-state: paused;
-}
+} */
 
 
 
@@ -136,6 +133,7 @@ img {
   height: 50px;
   width: 4px;
   border-radius: 10px;
+
   display: block;
   background-color: var(--primary-color);
 }
@@ -168,24 +166,22 @@ img {
 
   min-height: 90vh;
   gap: 5%;
-  padding: 0 50px;
 }
 
 .text-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 100px 0;
 }
 
 .text-content h1 {
-  font-family: Changa One, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--header-font);
   font-size: 3rem;
   color: var(--primary-color);
 }
 
 .text-content p {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--normal-font);
   color: var(--accent-color);
   font-size: 1.1rem;
 }
@@ -195,7 +191,7 @@ img {
   padding: 16px 25px;
 
   font-size: 1rem;
-  color: #fff;
+  color: var(--main-bg-color);
 
   background-color: var(--accent-color);
   border: none;
@@ -205,59 +201,57 @@ img {
 }
 
 .main-image {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
-.main-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+/* .main-image img {
+
+} */
 
 
 /*  PRODUCTS SECTION  */
-.product-content {
-  padding: 30px;
-
+.product-content {  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   gap: 20px;
+  
 
   background-color: var(--accent-color);
 }
 
 .product-category h2 {
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--normal-font);
   color: var(--main-bg-color);
 }
 
 .products {
   display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
 .product {
-  width: 100%;
-  max-width: 300px;
-
-  background-color: var(--main-bg-color);
-  border-radius: 8px;
-
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 300px;
+  
+  background-color: var(--main-bg-color);
+
+  border-radius: 8px;
   overflow: hidden;
-  position: relative;
 }
 
 .product-preview img {
   width: 100%;
   height: auto;
-  transition: 300ms ease;
+  transition: all 300ms ease;
 }
 
 .product-details p {
@@ -265,12 +259,12 @@ img {
   bottom: 0;
   right: 0;
   left: 0;
-
-  height: 15%;
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 15%;
 
   font-size: 1.3rem;
   font-family: var(--header-font);
@@ -281,7 +275,7 @@ img {
   color: var(--accent-color);
 
   border-radius: 0 0 8px 8px;
-  transition: 300ms ease;
+  transition: all 300ms ease;
 }
 
 .product:hover p {
@@ -303,11 +297,12 @@ img {
   align-items: center;
 
   background-color: #FFF4E0;
+  /* background-color: var(--divider-color); */
 }
 
 .about-text {
-  padding: 5rem;
   text-align: center;
+  padding: 80px;
 }
 
 .about-content h2 {
@@ -332,7 +327,7 @@ img {
 }
 
 .about-content button {
-  margin-top: 3rem;
+  margin: 10px;
   padding: 12px 50px;
   border-radius: 50px;
 
@@ -356,14 +351,14 @@ button:active {
 
 /*  CONTACT SECTION  */
 .contact-content {
-  width: 100%;
-  min-height: 100vh;
-
   display: flex;
-  gap: 10%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 10%;
+
+  width: 100%;
 }
+
 
 .contact-texts {
   width: 42%;
