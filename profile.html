@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="home.html"><< back to home</a>
+    <h1 id="helloMsg">User</h1>
+
+    <a href="index.html">LOGOUT</a>
+
+    <script>
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+        document.querySelector("#helloMsg").innerHTML = ` ${loggedInUser.name}`;
+
+        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+
+        if(user){
+        console.log("Welcome " + user.name);
+        } else {
+        console.log("No one is logged in");
+        }
+    </script>
+</body>
+</html>

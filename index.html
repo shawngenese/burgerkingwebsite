@@ -1,229 +1,143 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewpoert" content="width=device-width, initial-scale=1.0">
-    <title>Fast Food Chain in the Philippines</title>
-    <link rel="icon" type="image/x-icon" href="images/burger-king-logo.webp">
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Burger King</title>
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
     <div class="main">
+        <div class="log-reg-container">
 
-      <div class="navigation-main">
-        <div class="logo-container">
-          <img src="images/burger-king-logo.webp" alt="logo">
-        </div>
-        <ul class="menu-container">
-            <li><a href="#home">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><span></span></li>
-            <li><a href="#"><svg class="shop-cart" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="40px" fill="rgb(80, 35, 22)"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg></a></li>
-            <li><a href="user.html"><svg class="search" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="40px" fill="rgb(80, 35, 22)"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></a></li>
-        </ul>
-      </div>
+            <div class="left-side">
+                <h1>BURGER KING</h1>
+                <p>Experience the bold taste of flame-grilled perfection crafted exactly the way you like it. Sign in to access your account.</p>
+            </div>
 
-      <div class="main-content" id="home">
-        <div class="text-content">
-          <div class="text-title">
-            <h1>BURGER KING</h1>
-          </div>
-          <div class="title-description">
-            <p>Welcome to Philippines, where bold flavors meet flame-grilled perfection. We are proud to serve delicious burgers, crispy chicken, savory sides, and refreshing drinks that satisfy every craving. Experience food made your way, every day.
-            </p>
-          </div>
-          <div class="buttons">
-            <a href="products.html">
-              <button>Order Now</button>
-            </a>
-          </div>
-        </div>
-        <div class="main-image">
-          <img src="images/main-image-burger.png" alt="">
-        </div>
-      </div>
+            <div class="right-side">
 
-      <div class="product-content">
-        <div class="product-category">
-          <h2>Discover Our Menu</h2>
-        </div>
-        <div class="products">
-          <div class="product">
-            <a href="products.html#whopper">
-              <div class="product-preview">
-                <img src="images/Angriest_Whopper-removebg-preview.png" alt="">
-              </div>
-              <div class="product-details">
-                <p class="item">WHOPPER</p>
-              </div>
-            </a>
-          </div>
-          <div class="product">
-            <a href="products.html#chicken_rice">
-              <div class="product-preview">
-                <img src="images/chicken_rice.webp" alt="">
-              </div>
-              <div class="product-details">
-                <p class="item">CHICKEN RICE</p>
-              </div>
-            </a>
-          </div>
-          <div class="product">
-            <a href="products.html#sides">
-              <div class="product-preview">
-                <img src="images/sides.webp" alt="">
-              </div>
-              <div class="product-details">
-                <p>SIDES</p>
-              </div>
-            </a>
-          </div>
-          <div class="product">
-            <a href="products.html#breakfast">
-              <div class="product-preview">
-                <img src="images/breakfast.webp" alt="">
-              </div>
-              <div class="product-details">
-                <p>BREAKFAST</p>
-              </div>
-            </a>
-          </div>
-          <div class="product">
-            <a href="products.html#drinks">
-              <div class="product-preview">
-                <img src="images/drinks.webp" alt="">
-              </div>
-              <div class="product-details">
-                <p>DRINKS</p>
-              </div>
-            </a>
-          </div>
-          <div class="product">
-            <a href="products.html#desserts">
-              <div class="product-preview">
-                <img src="images/dessert.webp" alt="">
-              </div>
-              <div class="product-details">
-                <p>DESSERT</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+                <div class="log-type">
+                    <button class="sign-in active" onclick="showLogin()">Sign In</button>
+                    <button class="sign-up" onclick="showRegister()">Sign up</button>
+                </div>
 
-      <div class="about-content">
-        <div class="about-text">
-          <h2>About Us</h2>
-          <p>
-            Burger King is one of the world's most recognized fast-food brands, known for serving flame-grilled burgers and bold, satisfying flavors. For decades, we have been committed to delivering great-tasting food that is affordable, high-quality, and made with care. Our goal is simple: to provide our customers with a delicious and enjoyable dining experience every time they visit.
-          </p>
-          <p>
-            Thank you for choosing Burger King. We look forward to serving you and being part of your everyday cravings, celebrations, and moments of happiness.
-          </p>
-          <a href="about.html">
-            <button>Read More</button>
-          </a>
-        </div>
-      </div>
+                <div class="forms">
+                                        
+                    <form action="" class="signInFrm active">
+                        <input type="email" name="" id="emailLogin" placeholder="Email Address" >
+                        <input type="password" name="" id="passwordLogin" placeholder="Password" >
+                        <button type="submit">Sign In</button>
+                        <p id="loginMessage" style="color:red;"></p>
+                    </form>
+                    
+                    <form action="" class="signUpFrm">
+                        <input type="text" name="" id="nameCreate" placeholder="Full Name" >
+                        <input type="email" name="" id="emailCreate" placeholder="Email Address" >
+                        <input type="password" name="" id="passwordCreate" placeholder="Password" >
+                        <input type="password" name="" id="confirmPass" placeholder="Confirm Password" >
+                        <button type="submit">Create Account</button>
+                        <p id="registerMessage" style="color:red;"></p>
+                    </form>
 
-      <div class="contact-content" id="contact">
+                    <a href="home.html">Continue without an account >></a>
 
-        <div class="contact-texts">
-          <h1>Get in touch with us</h1>
-          <p>We value every customer and every experience. If you have questions about our menu, feedback about your recent visit, or suggestions on how we can improve, we would love to hear from you. Our team is always ready to assist and make sure you receive the best service possible.</p>
-          <p>
-            Email Address: <a href="https://login.yahoo.com/" target="_blank">fakeaccountburgerkingphilipines@yahoo.com</a> <br>
-            Phone Number: (+63)998-765-4321 <br>
-            Location: Los Angeles, Mabalacat, Pampanga, USA
-          </p>
-        </div>
+                </div>
 
-        <form action="" method="" class="contact-details">
-          <label for="">Name</label>
-          <input type="text" name="" id="" required>
-          <label for="">Email</label>
-          <input type="email" name="" id="" required>
-          <label for="">Phone Number</label>
-          <input type="text" name="" id="" required>
-          <label for="">Address</label>
-          <input type="text" name="" id="" required>
-          <label for="">Your Message</label>
-          <textarea rows="4" required></textarea>
-          <button type="submit">Send</button>
-        </form>
 
-      </div>
-
-      <div class="footer-content" style="text-align: center; color: rgb(221, 221, 221)">
-        <ul class="footer-navigation" style="font-family: Changa One">
-          <li><a href="#">Discover</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Help Center</a></li>
-        </ul>
-
-        <hr style="background-color: rgb(198, 198, 198); height: 3px; width: 85%; border: none; margin: 20px;">
-
-        <div class="footer-info" style="font-family: Tahoma;">
-
-          <p>At Burger King, our mission is to serve high-quality food that tastes great and is made with care. From our iconic flame-grilled burgers to our crispy chicken, tasty sides, and refreshing beverages, we are committed to delivering meals that bring people together. We believe everyone deserves food that is flavorful, affordable, and satisfying. Thank you for choosing Burger King as your favorite place to enjoy great food and great moments.</p>
-
-          <h1 style="font-family: Changa One;">Follow Us!</h1>
-
-          <ul class="socials">
-            <li>
-              <a href="#">
-                <svg fill="#000000" width="50px" height="50px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z"/>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg fill="#000000" height="44px" width="44px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                  viewBox="-143 145 512 512" xml:space="preserve">
-                <g>
-                  <path d="M113,446c24.8,0,45.1-20.2,45.1-45.1c0-9.8-3.2-18.9-8.5-26.3c-8.2-11.3-21.5-18.8-36.5-18.8s-28.3,7.4-36.5,18.8
-                    c-5.3,7.4-8.5,16.5-8.5,26.3C68,425.8,88.2,446,113,446z"/>
-                  <polygon points="211.4,345.9 211.4,308.1 211.4,302.5 205.8,302.5 168,302.6 168.2,346 	"/>
-                  <path d="M183,401c0,38.6-31.4,70-70,70c-38.6,0-70-31.4-70-70c0-9.3,1.9-18.2,5.2-26.3H10v104.8C10,493,21,504,34.5,504h157
-                    c13.5,0,24.5-11,24.5-24.5V374.7h-38.2C181.2,382.8,183,391.7,183,401z"/>
-                  <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M241,374.7v104.8
-                    c0,27.3-22.2,49.5-49.5,49.5h-157C7.2,529-15,506.8-15,479.5V374.7v-52.3c0-27.3,22.2-49.5,49.5-49.5h157
-                    c27.3,0,49.5,22.2,49.5,49.5V374.7z"/>
-                </g>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg width="83px" height="83px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.67 8.14002C19.5811 7.7973 19.4028 7.48433 19.1533 7.23309C18.9038 6.98185 18.5921 6.80134 18.25 6.71001C16.176 6.4654 14.0883 6.35517 12 6.38001C9.91174 6.35517 7.82405 6.4654 5.75001 6.71001C5.40793 6.80134 5.09622 6.98185 4.84674 7.23309C4.59725 7.48433 4.41894 7.7973 4.33001 8.14002C4.10282 9.41396 3.99236 10.706 4.00001 12C3.99198 13.3007 4.10244 14.5994 4.33001 15.88C4.42355 16.2172 4.60391 16.5239 4.85309 16.7696C5.10226 17.0153 5.41153 17.1913 5.75001 17.28C7.82405 17.5246 9.91174 17.6349 12 17.61C14.0883 17.6349 16.176 17.5246 18.25 17.28C18.5885 17.1913 18.8978 17.0153 19.1469 16.7696C19.3961 16.5239 19.5765 16.2172 19.67 15.88C19.8976 14.5994 20.008 13.3007 20 12C20.0077 10.706 19.8972 9.41396 19.67 8.14002ZM10.36 14.39V9.63001L14.55 12L10.36 14.38V14.39Z"/>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg fill="#000000" width="44px" height="44px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm3.905 7.864c.004.082.005.164.005.244 0 2.5-1.901 5.381-5.379 5.381a5.335 5.335 0 0 1-2.898-.85c.147.018.298.025.451.025.886 0 1.701-.301 2.348-.809a1.895 1.895 0 0 1-1.766-1.312 1.9 1.9 0 0 0 .853-.033 1.892 1.892 0 0 1-1.517-1.854v-.023c.255.141.547.227.857.237a1.89 1.89 0 0 1-.585-2.526 5.376 5.376 0 0 0 3.897 1.977 1.891 1.891 0 0 1 3.222-1.725 3.797 3.797 0 0 0 1.2-.459 1.9 1.9 0 0 1-.831 1.047 3.799 3.799 0 0 0 1.086-.299 3.834 3.834 0 0 1-.943.979z"/></svg>
-              </a>
-            </li>
-          </ul>
-
-          <hr style="background-color: rgb(198, 198, 198); height: 3px; width: 85%; border: none; margin-top: 20px;">
-
-          <p>&copy; 2026 All Rights Reserved For Shawn Genese</p>
+            </div>
 
         </div>
-      </div>
 
     </div>
-    
-    <script src="script.js"></script>
 
-  </body>
+    <script>
+        const signIn = document.querySelector('.sign-in');
+        const signUp = document.querySelector('.sign-up');
+        const signInForm = document.querySelector('.signInFrm');
+        const signUpForm = document.querySelector('.signUpFrm');
+
+        function showLogin() {
+            signUp.classList.remove('active')
+            signIn.classList.add('active')
+            signInForm.classList.add('active')
+            signUpForm.classList.remove('active')
+        }
+
+        function showRegister() {
+            signUp.classList.add('active')
+            signIn.classList.remove('active')
+            signInForm.classList.remove('active')
+            signUpForm.classList.add('active')
+        }
+
+        let users =  JSON.parse(localStorage.getItem('users')) || [];
+        
+        document.querySelector('.signUpFrm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.querySelector('#nameCreate').value;
+            const email = document.querySelector('#emailCreate').value;
+            const password = document.querySelector('#passwordCreate').value;
+            const confirmPass = document.querySelector('#confirmPass').value;
+            const registerMessage = document.querySelector('#registerMessage');
+
+            if(!name || !email || !password || !confirmPass) {
+                registerMessage.textContent = "Please fill in all fields!";
+                registerMessage.style.color = "red";
+                return;
+            }
+            if(password !== confirmPass) {
+                registerMessage.textContent = "Passwords do not match!"
+                registerMessage.style.color = "red";
+                return;
+            }
+
+            if(users.find(usr => usr.email === email)) {
+                registerMessage.textContent = "Email is already registered!"
+                registerMessage.style.color = "red";
+                return;
+            }
+
+            const newUser = {name, email, password};
+            users.push(newUser);
+            
+            localStorage.setItem("users", JSON.stringify(users));
+
+            // console.log(users);
+            registerMessage.textContent = "Account is already created";
+            registerMessage.style.color = "green";
+
+            this.reset();
+        });
+
+        document.querySelector('.signInFrm').addEventListener('submit', function(event){
+            event.preventDefault();
+            const email = document.querySelector('#emailLogin').value;
+            const password = document.querySelector('#passwordLogin').value;
+            const loginMessage = document.querySelector('#loginMessage');
+
+            const user = users.find(u => u.email === email && u.password === password);
+
+            if(user){
+                loginMessage.textContent = `Welcome back ${user.name}`;
+                loginMessage.style.color = "green";
+
+                    // Save logged-in user in localStorage
+                    localStorage.setItem('loggedInUser', JSON.stringify(user));
+
+                setTimeout(() => {                    
+                    window.location.href = "home.html";
+                }, 1000);
+                this.reset();
+            } else {
+                loginMessage.textContent = "Email or password is incorrect!"
+                loginMessage.style.color = "red";
+            }
+        });
+    </script>
+
+</body>
 </html>
+
+
