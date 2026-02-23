@@ -96,19 +96,10 @@ img {
   /* margin: 80px; */
 }
 
-
-
-/* taggalin mo rin to HAHAHAHA */
 .logo-container img {
   height: 100px;
   display: block;
-
-  /* animation: spinning 4s linear infinite; */
 }
-/* .logo-container img:hover {
-  animation-play-state: paused;
-} */
-
 
 .menu-container {
   display: flex;
@@ -227,11 +218,6 @@ img {
   width: 100%;
 }
 
-/* .main-image img {
-
-} */
-
-
 /*  PRODUCTS SECTION  */
 .product-content {  
   display: flex;
@@ -318,7 +304,6 @@ img {
   align-items: center;
 
   background-color: #FFF4E0;
-  /* background-color: var(--divider-color); */
 }
 
 .about-text {
@@ -458,7 +443,7 @@ input, textarea {
   width: 100%;
   resize: none;
 
-  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--normal-font);
   border: 1px solid var(--accent-color);
   background-color: var(--main-bg-color);
 }
@@ -539,23 +524,51 @@ textarea:focus-visible {
   justify-content: center;
   gap: 100px;
 }
-
-
-/*  ANIMATION  */
 @keyframes fadeIn {
   from { opacity: 0}
   to { opacity: 1}
 }
-
-@keyframes spinning {
-    0%{
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.slideUp {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
 }
 
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+.slideLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideLeft 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
 
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
+.slideRight {
+  opacity: 0;
+  transform: translateX(40px);
+  animation: slideRight 0.8s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

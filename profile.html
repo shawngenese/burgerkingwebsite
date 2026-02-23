@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <a href="home.html"><< back to home</a>
-    <h1 id="helloMsg">User</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Profile | Burger King</title>
+        <link rel="icon" type="image/x-icon" href="images/burger-king-logo.webp">
+        <link rel="stylesheet" href="css/user.css">
+    </head>
 
-    <a href="index.html">LOGOUT</a>
+<body>
+    <div class="main-profile-container">
+        <div class="profile-container">
+            <div class="profile" id="profileLogo">?</div>
+            <h2 id="profileName"></h2>
+            <p id="emailAddress"></p>
+            <button id="logout"></button>
+            <a href="home.html" class="backToHome"><-- Back to Home</a>
+        </div>
+    </div>
 
     <script>
-        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    const profileLogo = document.querySelector('#profileLogo');
+    const profileName = document.querySelector('#profileName');
+    const emailAddress = document.querySelector('#emailAddress');
+    const logoutBtn = document.querySelector('#logout');
 
-        document.querySelector("#helloMsg").innerHTML = ` ${loggedInUser.name}`;
+    if(loggedInUser){
+        profileName.textContent = loggedInUser.name;
+        emailAddress.textContent = loggedInUser.email;
+        profileLogo.textContent = loggedInUser.name.charAt(0).toUpperCase();
+        logoutBtn.textContent = "Logout";
+    } 
+    else {
+        profileName.textContent = "Guest User";
+        emailAddress.textContent = "Not logged in";
+        profileLogo.textContent = "G";
+        logoutBtn.textContent = "Sign In";
+    }
 
-        const user = JSON.parse(localStorage.getItem('loggedInUser'));
+    logoutBtn.addEventListener('click', function(){
+        localStorage.removeItem("loggedInUser");
+        window.location.href = "index.html";
+    });
 
-        if(user){
-        console.log("Welcome " + user.name);
-        } else {
-        console.log("No one is logged in");
-        }
     </script>
-</body>
+
+    </body>
 </html>

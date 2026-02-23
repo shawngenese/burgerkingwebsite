@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up | Burger King</title>
+    <link rel="icon" type="image/x-icon" href="images/burger-king-logo.webp">
     <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
@@ -41,7 +42,7 @@
                         <p id="registerMessage" style="color:red;"></p>
                     </form>
 
-                    <a href="home.html">Continue without an account >></a>
+                    <a href="home.html" id="guestAccount">Continue without an account >></a>
 
                 </div>
 
@@ -123,18 +124,18 @@
                 loginMessage.textContent = `Welcome back ${user.name}`;
                 loginMessage.style.color = "green";
 
-                    // Save logged-in user in localStorage
-                    localStorage.setItem('loggedInUser', JSON.stringify(user));
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
 
                 setTimeout(() => {                    
                     window.location.href = "home.html";
                 }, 1000);
                 this.reset();
             } else {
-                loginMessage.textContent = "Email or password is incorrect!"
+                loginMessage.textContent = "Email or password is incorrect!";
                 loginMessage.style.color = "red";
             }
         });
+
     </script>
 
 </body>
