@@ -22,7 +22,8 @@
   outline: 1px solid none;
 }
 
-html, body {
+html, 
+body {
   font-size: 1.4em;
   background-color: var(--main-bg-color);
   scroll-behavior: smooth;
@@ -33,7 +34,9 @@ body {
   animation: fadeIn 1.5s forwards;
 }
 
-li { list-style: none; }
+li { 
+  list-style: none; 
+}
 
 a {
   text-decoration: none;
@@ -152,6 +155,15 @@ img {
 .menu-container li:nth-child(6) a::after,
 .menu-container li:nth-child(7) a::after {
   all: unset;
+}
+
+
+.menu-container svg {
+  transition: all 300ms ease;
+}
+.menu-container li:nth-child(6) a svg:hover,
+.menu-container li:nth-child(7) a svg:hover {
+  fill: var(--primary-color);
 }
 
 
@@ -572,3 +584,7 @@ textarea:focus-visible {
     transform: translateX(0);
   }
 }
+
+
+
+

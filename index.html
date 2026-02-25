@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,28 +10,22 @@
 <body>
     <div class="main">
         <div class="log-reg-container">
-
             <div class="left-side">
                 <h1>BURGER KING</h1>
                 <p>Experience the bold taste of flame-grilled perfection crafted exactly the way you like it. Sign in to access your account.</p>
             </div>
-
             <div class="right-side">
-
                 <div class="log-type">
                     <button class="sign-in active" onclick="showLogin()">Sign In</button>
                     <button class="sign-up" onclick="showRegister()">Sign up</button>
                 </div>
-
-                <div class="forms">
-                                        
+                <div class="forms">                                 
                     <form action="" class="signInFrm active">
                         <input type="email" name="" id="emailLogin" placeholder="Email Address" >
                         <input type="password" name="" id="passwordLogin" placeholder="Password" >
                         <button type="submit">Sign In</button>
                         <p id="loginMessage" style="color:red;"></p>
-                    </form>
-                    
+                    </form>                   
                     <form action="" class="signUpFrm">
                         <input type="text" name="" id="nameCreate" placeholder="Full Name" >
                         <input type="email" name="" id="emailCreate" placeholder="Email Address" >
@@ -41,16 +34,10 @@
                         <button type="submit">Create Account</button>
                         <p id="registerMessage" style="color:red;"></p>
                     </form>
-
                     <a href="home.html" id="guestAccount">Continue without an account --></a>
-
                 </div>
-
-
             </div>
-
         </div>
-
     </div>
 
     <script>
@@ -74,7 +61,7 @@
         }
 
         let users =  JSON.parse(localStorage.getItem('users')) || [];
-        
+
         document.querySelector('.signUpFrm').addEventListener('submit', function(event) {
             event.preventDefault();
             const name = document.querySelector('#nameCreate').value;
@@ -104,11 +91,8 @@
             users.push(newUser);
             
             localStorage.setItem("users", JSON.stringify(users));
-
-            // console.log(users);
             registerMessage.textContent = "Account is already created";
             registerMessage.style.color = "green";
-
             this.reset();
         });
 
@@ -121,7 +105,7 @@
             const user = users.find(u => u.email === email && u.password === password);
 
             if(user){
-                loginMessage.textContent = `Welcome back ${user.name}`;
+                loginMessage.textContent = `Welcome ${user.name}`;
                 loginMessage.style.color = "green";
 
                 localStorage.setItem('loggedInUser', JSON.stringify(user));
@@ -135,7 +119,6 @@
                 loginMessage.style.color = "red";
             }
         });
-
     </script>
 
 </body>
